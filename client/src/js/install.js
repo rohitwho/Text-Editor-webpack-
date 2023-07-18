@@ -29,4 +29,3 @@ window.addEventListener('appinstalled', (event) => {
     console.log('👍', 'appinstalled', event);
 });
 
-console.log("hello install.js")
