@@ -17,11 +17,7 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    // devServer: {
-    //   // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
-    //   hot: 'only',
-    // },
-  
+   
     plugins: [
       new HtmlWebpackPlugin({ template: './index.html' }),
       new InjectManifest({
@@ -30,6 +26,7 @@ module.exports = () => {
       }),
 
       // Creates a manifest.json file.
+      
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
